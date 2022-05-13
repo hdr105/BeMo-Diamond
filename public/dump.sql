@@ -23,12 +23,12 @@ CREATE TABLE `cards` (
   PRIMARY KEY (`id`),
   KEY `cards_column_id_foreign` (`column_id`),
   CONSTRAINT `cards_column_id_foreign` FOREIGN KEY (`column_id`) REFERENCES `columns` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `cards` WRITE;
 /*!40000 ALTER TABLE `cards` DISABLE KEYS */;
-INSERT INTO `cards` VALUES (1,1,'1','1','1','2022-05-13 06:11:52','2022-05-13 06:54:11'),(2,5,'2','2','0','2022-05-13 06:11:56','2022-05-13 06:57:54'),(3,3,'3','3','0','2022-05-13 06:12:01','2022-05-13 06:57:54'),(4,4,'4','4','1','2022-05-13 06:12:13','2022-05-13 06:57:54'),(5,3,'5','5','1','2022-05-13 06:12:17','2022-05-13 06:57:54'),(6,2,'6','6','0','2022-05-13 06:12:20','2022-05-13 06:54:11'),(7,4,'asda','sadasd','1','2022-05-13 06:53:00','2022-05-13 06:57:55');
+INSERT INTO `cards` VALUES (11,9,'col 1 card 1','desc test','1','2022-05-13 10:53:04','2022-05-13 10:55:01'),(12,9,'col 1 card 2','desc 123','2','2022-05-13 10:53:37','2022-05-13 10:55:01'),(13,9,'col 2 card1',NULL,'1','2022-05-13 10:53:54','2022-05-13 10:55:02'),(14,9,'col 2 card 2','test123','0','2022-05-13 10:54:08','2022-05-13 10:55:01');
 /*!40000 ALTER TABLE `cards` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `columns`;
@@ -40,12 +40,12 @@ CREATE TABLE `columns` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `columns` WRITE;
 /*!40000 ALTER TABLE `columns` DISABLE KEYS */;
-INSERT INTO `columns` VALUES (1,'col 1','2022-05-13 06:11:44','2022-05-13 06:11:44'),(2,'col 2','2022-05-13 06:12:08','2022-05-13 06:12:08'),(3,'asdasd','2022-05-13 06:30:50','2022-05-13 06:30:50'),(4,'asdasd','2022-05-13 06:30:54','2022-05-13 06:30:54'),(5,'sadfsad','2022-05-13 06:52:55','2022-05-13 06:52:55');
+INSERT INTO `columns` VALUES (8,'col1','2022-05-13 10:52:51','2022-05-13 10:52:51'),(9,'col 2','2022-05-13 10:53:45','2022-05-13 10:53:45');
 /*!40000 ALTER TABLE `columns` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `failed_jobs`;
